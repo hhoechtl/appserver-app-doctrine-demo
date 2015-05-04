@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.appserver.io/appserver">
+    <datasource name="customer.database">
+        <database>
+            <driver>pdo_mysql</driver>
+            <user>customer</user>
+            <password>customer</password>
+            <databaseName>customer</databaseName>
+        </database>
+    </datasource>
+
+    <!--
+    <datasource name="appserver.io-example-application">
+        <database>
+            <driver>pdo_sqlite</driver>
+            <user>appserver</user>
+            <password>appserver</password>
+            <path>META-INF/data/appserver_ApplicationServer.sqlite</path>
+            <memory>false</memory>
+        </database>
+    </datasource>-->
+
+</datasources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provision xmlns="http://www.appserver.io/appserver">
+
+    <datasource name="customer.database"/>
+
+    <installation>
+        <steps>
+            <step type="AppserverIo\Appserver\Core\Provisioning\CreateDatabaseStep">
+                <params>
+                    <param name="pathToEntities" type="string">vendor/onedrop-customer/common/src/Onedrop/Customer/App/Common/Entities</param>
+                </params>
+            </step>
+        </steps>
+    </installation>
+
+</provision>

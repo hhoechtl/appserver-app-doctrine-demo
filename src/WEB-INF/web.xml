@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://www.appserver.io/appserver">
+
+    <display-name>Customer Product API</display-name>
+    <description>The servlet application which serves the product API.</description>
+
+    <session-config>
+
+        <session-name>example_login</session-name>
+        <session-file-prefix>example_session_</session-file-prefix>
+
+        <!--
+        <session-save-path>/tmp</session-save-path>
+        <garbage-collection-probability>0.1</garbage-collection-probability>
+        <session-save-path>60</session-save-path>
+        <session-maximum-age>0</session-maximum-age>
+        <session-inactivity-timeout>1440</session-inactivity-timeout>
+        <session-cookie-lifetime>86400</session-cookie-lifetime>
+        <session-cookie-domain>localhost</session-cookie-domain>
+        <session-cookie-path>/</session-cookie-path>
+        <session-cookie-secure>false</session-cookie-secure>
+        <session-http-only>false</session-http-only>
+        -->
+
+    </session-config>
+
+    <servlet>
+        <description>The hello world as servlet implementation.</description>
+        <display-name>Hello World</display-name>
+        <servlet-name>helloWorld</servlet-name>
+        <servlet-class>\Onedrop\Customer\Api\Product\Servlets\HelloWorldServlet</servlet-class>
+    </servlet>
+
+    <!--<servlet>-->
+        <!--<description>An example webservice server implmentation.</description>-->
+        <!--<display-name>The webservice controller servlet</display-name>-->
+        <!--<servlet-name>webservice</servlet-name>-->
+        <!--<servlet-class>\AppserverIo\Apps\Example\Servlets\WebserviceServlet</servlet-class>-->
+    <!--</servlet>-->
+
+
+    <servlet-mapping>
+        <servlet-name>helloWorld</servlet-name>
+        <url-pattern>/helloWorld.do</url-pattern>
+    </servlet-mapping>
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>webservice</servlet-name>-->
+        <!--<url-pattern>/webservice.do</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>webservice</servlet-name>-->
+        <!--<url-pattern>/webservice.do*</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>randomRuntime</servlet-name>-->
+        <!--<url-pattern>/randomRuntime.do</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>randomRuntime</servlet-name>-->
+        <!--<url-pattern>/randomRuntime.do*</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<security>-->
+        <!--<url-pattern>/index.do/basicAuthentication*</url-pattern>-->
+        <!--<auth>-->
+            <!--<auth-type>Basic</auth-type>-->
+            <!--<realm>test</realm>-->
+            <!--<adapter-type>htpasswd</adapter-type>-->
+            <!--<options>-->
+                <!--<file>WEB-INF/htpasswd</file>-->
+            <!--</options>-->
+        <!--</auth>-->
+    <!--</security>-->
+
+    <!--<security>-->
+        <!--<url-pattern>/index.do/digestAuthentication*</url-pattern>-->
+        <!--<auth>-->
+            <!--<auth-type>Digest</auth-type>-->
+            <!--<realm>Digest-Example-Realm</realm>-->
+            <!--<adapter-type>htdigest</adapter-type>-->
+            <!--<options>-->
+                <!--<file>WEB-INF/htdigest</file>-->
+            <!--</options>-->
+        <!--</auth>-->
+    <!--</security>-->
+
+</web-app>

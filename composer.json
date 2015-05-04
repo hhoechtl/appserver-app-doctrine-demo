@@ -1,0 +1,41 @@
+{
+  "name": "onedrop-customer/product-app",
+  "description": "The servlet application which serves the product API",
+  "version": "0.0.1",
+  "require": {
+    "onedrop-customer/common": "@dev",
+    "ruflin/elastica": "dev-master"
+  },
+  "require-dev": {
+    "appserver-io/phar": "~1.0",
+    "appserver-io/build": "~1.0",
+    "appserver-io/messaging": "~1.0",
+    "appserver-io/lang": "~1.0",
+    "appserver-io-psr/mop": "~1.0",
+    "appserver-io-psr/epb": "~1.0",
+    "appserver-io-psr/servlet": "~1.0"
+  },
+  "config": {
+    "vendor-dir": "src/vendor"
+  },
+  "autoload": {
+    "psr-0": {
+      "Onedrop\\Customer\\Api\\Product": [
+        "src/WEB-INF/classes/",
+        "src/META-INF/classes/"
+      ]
+    }
+  },
+  "authors": [
+    {
+      "name": "Hans Hoechtl",
+      "email": "hhoechtl@1drop.de"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "git@bitbucket.org:onedrop/customer-common.git"
+    }
+  ]
+}
